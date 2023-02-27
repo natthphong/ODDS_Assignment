@@ -1,6 +1,12 @@
+
 import java.util.Scanner;
 
-class Hw6 {
+import model.Gryffindor;
+import model.Hogwarts;
+import model.Hufflepuff;
+import model.Ravenclaw;
+
+class main {
     static int num = 0;
 
     static void printNumHouse(Hogwarts[] students) {
@@ -77,6 +83,7 @@ class Hw6 {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
         String str = "-";
         ///
         System.out.println(str.repeat(50));
@@ -90,6 +97,7 @@ class Hw6 {
         }
         int max;
 
+      
         max = N % 4 == 0 ? N / 4 : (N / 4) + 1;
         Hogwarts[] students = new Hogwarts[N];
         The_Sorting_Hat House = new The_Sorting_Hat(max);
@@ -165,3 +173,5 @@ class Hw6 {
     }
 
 }
+
+

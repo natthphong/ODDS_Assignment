@@ -1,8 +1,9 @@
-class Gryffindor implements Hogwarts{
+package model;
+public class Gryffindor implements Hogwarts{
     private String name;
     private String  nameWand;
  
-    Gryffindor(String name){
+   public Gryffindor(String name){
          this.name =  name;
     }
  

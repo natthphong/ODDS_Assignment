@@ -1,5 +1,11 @@
+
 import java.util.Random;
+
+import model.*;
+
+
 import java.util.Arrays;
+
 class The_Sorting_Hat {
     int[] maxStudents;
 

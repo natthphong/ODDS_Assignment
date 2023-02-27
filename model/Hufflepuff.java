@@ -1,9 +1,9 @@
-
-class Hufflepuff implements Hogwarts{
+package model;
+public class Hufflepuff implements Hogwarts{
     private String name;
     private String  nameWand;
     
-    Hufflepuff(String name){
+    public Hufflepuff(String name){
         this.name =  name;
    }
 

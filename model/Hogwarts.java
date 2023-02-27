@@ -1,4 +1,6 @@
-interface   Hogwarts{
+package model;
+
+public interface   Hogwarts{
     abstract  void basicSkill();
     //abstract  void printHouse();
     abstract String getName();

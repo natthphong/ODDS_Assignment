@@ -3,19 +3,38 @@ import java.util.Random;
 
 import model.*;
 
-
 import java.util.Arrays;
 
 class The_Sorting_Hat {
     int[] maxStudents;
+    Random random;
 
-    The_Sorting_Hat(int max) {
+    The_Sorting_Hat(int N) {
+        random = new Random();
         maxStudents = new int[4];
+        int max = (N % 4 == 0 || N % 4 < 3) ? N / 4 : (N / 4) + 1;
         Arrays.fill(maxStudents, max);
+        int n = (max * 4 < N) ? N - max * 4 : 0;
+        if (n == 2) {
+            int type = random.nextInt(3);
+            if (type == 3) {
+                maxStudents[type] += 1;
+                maxStudents[type - 1] += 1;
+            } else if (type == 0) {
+                maxStudents[type] += 1;
+                maxStudents[type + 1] += 1;
+            } else {
+                maxStudents[type] += 1;
+                maxStudents[type + 1] += 1;
+            }
+        } else if (n == 1) {
+            int type = random.nextInt(3);
+            maxStudents[type] += 1;
+        }
+
     }
 
     Hogwarts randomHouse(String name) {
-        Random random = new Random();
         int type = random.nextInt(3);
         switch (type) {
             case 0:

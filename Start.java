@@ -18,11 +18,9 @@ class Start {
             scan.close();
             return;
         }
-        int max;
-        max = N % 4 == 0 ? N / 4 : (N / 4) + 1;
-
+    
         Hogwarts[] students = new Hogwarts[N];
-        The_Sorting_Hat House = new The_Sorting_Hat(max);
+        The_Sorting_Hat House = new The_Sorting_Hat(N);
 
         String studentName;
         num = 0;

@@ -58,8 +58,16 @@ class The_Sorting_Hat {
                     return new Slytherin(name);
                 }
             default:
+                if (maxStudents[1] > 0) {
+                    maxStudents[1]--;
+                    return new Hufflepuff(name);
+                }
+                else if (maxStudents[2] > 0) {
+                    maxStudents[2]--;
+                    return new Ravenclaw(name);
+                }
                 maxStudents[0]--;
-                return new Gryffindor(name);
+                    return new Gryffindor(name);
         }
     }
 }
